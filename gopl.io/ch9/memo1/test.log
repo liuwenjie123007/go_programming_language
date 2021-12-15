@@ -1,0 +1,580 @@
+=== RUN   TestConcurrent
+objc[26266]: Attempt to use unknown class 0x7ff85d8d9360.
+SIGABRT: abort
+PC=0x7ff81c0a5dfe m=7 sigcode=0
+
+goroutine 0 [idle]:
+runtime: unknown pc 0x7ff81c0a5dfe
+stack: frame={sp:0x700008600e58, fp:0x0} stack=[0x700008582338,0x700008601f38)
+0x0000700008600d58:  0x0000000000000002  0x0000000000000002 
+0x0000700008600d68:  0x000000000215d000  0x000000000215d400 
+0x0000700008600d78:  0x0000000000000004  0x0000700008600de0 
+0x0000700008600d88:  0x00007ff81bedb639  0x0000000000000000 
+0x0000700008600d98:  0xf6b84000c0001004  0x000000000000ffff 
+0x0000700008600da8:  0x0000000000000030  0x0000000000000000 
+0x0000700008600db8:  0x000000000000002d  0x000000000000002d 
+0x0000700008600dc8:  0x0000000000000000  0x000000000215d000 
+0x0000700008600dd8:  0x00007ff85d8ed000  0x0000700008600e10 
+0x0000700008600de8:  0x00007ff81bedb566  0x00007ff81bedb52e 
+0x0000700008600df8:  0x000000000000002d  0x0000000000000001 
+0x0000700008600e08:  0x00007ff85d8ed000  0x0000700008600e50 
+0x0000700008600e18:  0x00007ff81bef7ad6  0x000000000000002c 
+0x0000700008600e28:  0x000000000000002d  0x0000600003300000 
+0x0000700008600e38:  0x0000000000000003  0x0000600002c00000 
+0x0000700008600e48:  0x0000000000000000  0x0000700008600e80 
+0x0000700008600e58: <0x00007ff81c0a7893  0x0000000000000000 
+0x0000700008600e68:  0x0000002008600ec0  0x0000600002c00000 
+0x0000700008600e78:  0x0000700008600ec0  0x0000600003300000 
+0x0000700008600e88:  0x0000000000000003  0x0000000000000080 
+0x0000700008600e98:  0x0000000000000001  0x0000700008600eb0 
+0x0000700008600ea8:  0x00007ff81c0a7843  0x0000700008600ef0 
+0x0000700008600eb8:  0x00007ff81bf73bce  0x0000600002c00080 
+0x0000700008600ec8:  0x0000000000000000  0x0000600002c00000 
+0x0000700008600ed8:  0x00007ffffffffff8  0x00007ff85d8d9360 
+0x0000700008600ee8:  0x0000000080080001  0x0000700008600fd0 
+0x0000700008600ef8:  0x00007ff81bf73b5c  0x0000003000000010 
+0x0000700008600f08:  0x0000700008600fe0  0x0000700008600f20 
+0x0000700008600f18:  0x0000000000000000  0x0000000000000000 
+0x0000700008600f28:  0x00007ff85d8d9360  0x00007ff85d8d9360 
+0x0000700008600f38:  0x0000000000000001  0x00000000ffffffff 
+0x0000700008600f48:  0x0000000000000000  0x0000000000000000 
+runtime: unknown pc 0x7ff81c0a5dfe
+stack: frame={sp:0x700008600e58, fp:0x0} stack=[0x700008582338,0x700008601f38)
+0x0000700008600d58:  0x0000000000000002  0x0000000000000002 
+0x0000700008600d68:  0x000000000215d000  0x000000000215d400 
+0x0000700008600d78:  0x0000000000000004  0x0000700008600de0 
+0x0000700008600d88:  0x00007ff81bedb639  0x0000000000000000 
+0x0000700008600d98:  0xf6b84000c0001004  0x000000000000ffff 
+0x0000700008600da8:  0x0000000000000030  0x0000000000000000 
+0x0000700008600db8:  0x000000000000002d  0x000000000000002d 
+0x0000700008600dc8:  0x0000000000000000  0x000000000215d000 
+0x0000700008600dd8:  0x00007ff85d8ed000  0x0000700008600e10 
+0x0000700008600de8:  0x00007ff81bedb566  0x00007ff81bedb52e 
+0x0000700008600df8:  0x000000000000002d  0x0000000000000001 
+0x0000700008600e08:  0x00007ff85d8ed000  0x0000700008600e50 
+0x0000700008600e18:  0x00007ff81bef7ad6  0x000000000000002c 
+0x0000700008600e28:  0x000000000000002d  0x0000600003300000 
+0x0000700008600e38:  0x0000000000000003  0x0000600002c00000 
+0x0000700008600e48:  0x0000000000000000  0x0000700008600e80 
+0x0000700008600e58: <0x00007ff81c0a7893  0x0000000000000000 
+0x0000700008600e68:  0x0000002008600ec0  0x0000600002c00000 
+0x0000700008600e78:  0x0000700008600ec0  0x0000600003300000 
+0x0000700008600e88:  0x0000000000000003  0x0000000000000080 
+0x0000700008600e98:  0x0000000000000001  0x0000700008600eb0 
+0x0000700008600ea8:  0x00007ff81c0a7843  0x0000700008600ef0 
+0x0000700008600eb8:  0x00007ff81bf73bce  0x0000600002c00080 
+0x0000700008600ec8:  0x0000000000000000  0x0000600002c00000 
+0x0000700008600ed8:  0x00007ffffffffff8  0x00007ff85d8d9360 
+0x0000700008600ee8:  0x0000000080080001  0x0000700008600fd0 
+0x0000700008600ef8:  0x00007ff81bf73b5c  0x0000003000000010 
+0x0000700008600f08:  0x0000700008600fe0  0x0000700008600f20 
+0x0000700008600f18:  0x0000000000000000  0x0000000000000000 
+0x0000700008600f28:  0x00007ff85d8d9360  0x00007ff85d8d9360 
+0x0000700008600f38:  0x0000000000000001  0x00000000ffffffff 
+0x0000700008600f48:  0x0000000000000000  0x0000000000000000 
+
+goroutine 7 [syscall]:
+runtime.cgocall(0x1001080, 0xc000066ca0)
+	/usr/local/opt/go/libexec/src/runtime/cgocall.go:156 +0x6e fp=0xc000066c78 sp=0xc000066c40 pc=0x104452e
+net._C2func_getaddrinfo(0xc00001c0c0, 0x0, 0xc00028a150, 0xc000010038)
+	_cgo_gotypes.go:97 +0x8b fp=0xc000066ca0 sp=0xc000066c78 pc=0x12854eb
+net.cgoLookupIPCNAME.func1({0xc00001c0c0, 0x10, 0xc0000160a8}, 0x0, 0x16710c0)
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:163 +0xb2 fp=0xc000066d10 sp=0xc000066ca0 pc=0x1287bb2
+net.cgoLookupIPCNAME({0x140d864, 0x3}, {0xc0000160a8, 0xc000128018})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:163 +0x26e fp=0xc000066f10 sp=0xc000066d10 pc=0x12870ae
+net.cgoIPLookup(0x16710d0, {0x140d864, 0x3}, {0xc0000160a8, 0xf})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:220 +0x67 fp=0xc000066f80 sp=0xc000066f10 pc=0x1287cc7
+net.cgoLookupIP·dwrap·22()
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:230 +0x72 fp=0xc000066fe0 sp=0xc000066f80 pc=0x1288372
+runtime.goexit()
+	/usr/local/opt/go/libexec/src/runtime/asm_amd64.s:1581 +0x1 fp=0xc000066fe8 sp=0xc000066fe0 pc=0x10ab5e1
+created by net.cgoLookupIP
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:230 +0x1ba
+
+goroutine 1 [chan receive]:
+testing.(*T).Run(0xc0001036c0, {0x141048e, 0xe}, 0x1426338)
+	/usr/local/opt/go/libexec/src/testing/testing.go:1307 +0x752
+testing.runTests.func1(0x0)
+	/usr/local/opt/go/libexec/src/testing/testing.go:1598 +0x9a
+testing.tRunner(0xc0001036c0, 0xc000137bf8)
+	/usr/local/opt/go/libexec/src/testing/testing.go:1259 +0x230
+testing.runTests(0xc000180000, {0x1666f20, 0x2, 0x2}, {0x0, 0x9afffff, 0x1671760})
+	/usr/local/opt/go/libexec/src/testing/testing.go:1596 +0x7cb
+testing.(*M).Run(0xc000180000)
+	/usr/local/opt/go/libexec/src/testing/testing.go:1504 +0x9d2
+main.main()
+	_testmain.go:47 +0x22c
+
+goroutine 19 [semacquire]:
+sync.runtime_Semacquire(0xc000128474)
+	/usr/local/opt/go/libexec/src/runtime/sema.go:56 +0x25
+sync.(*WaitGroup).Wait(0xc000128474)
+	/usr/local/opt/go/libexec/src/sync/waitgroup.go:130 +0xea
+gopl.io/ch9/memotest.Concurrent(0x1087feb, {0x147f940, 0xc00011aeb0})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:78 +0x21a
+gopl.io/ch9/memo1_test.TestConcurrent(0x0)
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1_test.go:16 +0xdb
+testing.tRunner(0xc000103860, 0x1426338)
+	/usr/local/opt/go/libexec/src/testing/testing.go:1259 +0x230
+created by testing.(*T).Run
+	/usr/local/opt/go/libexec/src/testing/testing.go:1306 +0x727
+
+goroutine 82 [runnable]:
+net/http.(*Transport).getConn(0x166bd80, 0xc000490000, {{}, 0x0, {0x1410544, 0x4}, {0xc000492006, 0xa}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc00048c000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc00048c000, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc00048c000, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc00048c000, {0x105854f, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc00048c000)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x1410544, 0xe})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x1410544, 0xe})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x1410544, 0xe})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x1410544, 0xe})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 21 [select]:
+net/http.(*Transport).getConn(0x166bd80, 0xc0000b4000, {{}, 0x0, {0x1411afe, 0x5}, {0xc0000b2012, 0xe}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc00009a000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc00009a000, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc00009a000, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc00009a000, {0x105854f, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc00009a000)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x1411afe, 0x12})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x1411afe, 0x12})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x1411afe, 0x12})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x1411afe, 0x12})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 22 [select]:
+net/http.(*Transport).getConn(0x166bd80, 0xc0000b4040, {{}, 0x0, {0x14114b8, 0x5}, {0xc0000b2033, 0xd}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc000212000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc000212000, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc000212000, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc000212000, {0x105854f, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc000212000)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x14114b8, 0x11})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x14114b8, 0x11})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x14114b8, 0x11})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x14114b8, 0x11})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 23 [select]:
+net/http.(*Transport).getConn(0x166bd80, 0xc00007e040, {{}, 0x0, {0x1413994, 0x5}, {0xc0000160a8, 0x13}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc00028c000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc00028c000, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc00028c000, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc00028c000, {0x105854f, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc00028c000)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x1413994, 0x17})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x1413994, 0x17})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x1413994, 0x17})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x1413994, 0x17})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 24 [select]:
+net/http.(*Transport).getConn(0x166bd80, 0xc00016c840, {{}, 0x0, {0x1410544, 0x4}, {0xc000128486, 0xa}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc000198000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc000198000, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc000198000, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc000198000, {0x1290cce, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc000198000)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x1410544, 0xe})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x1410544, 0xe})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x1410544, 0xe})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x1410544, 0xe})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 25 [select]:
+net/http.(*Transport).getConn(0x166bd80, 0xc000324000, {{}, 0x0, {0x1411afe, 0x5}, {0xc000320012, 0xe}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc00031a000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc00031a000, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc00031a000, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc00031a000, {0x105854f, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc00031a000)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x1411afe, 0x12})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x1411afe, 0x12})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x1411afe, 0x12})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x1411afe, 0x12})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 34 [select]:
+net/http.(*Transport).getConn(0x166bd80, 0xc0003a4000, {{}, 0x0, {0x14114b8, 0x5}, {0xc0003a0013, 0xd}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc000392000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc000392000, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc000392000, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc000392000, {0x105854f, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc000392000)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x14114b8, 0x11})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x14114b8, 0x11})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x14114b8, 0x11})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x14114b8, 0x11})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 26 [select]:
+net.(*Resolver).lookupIPAddr(0x16710c0, {0x1486248, 0xc0001266c0}, {0x140d864, 0x1671d00}, {0xc000128486, 0x7})
+	/usr/local/opt/go/libexec/src/net/lookup.go:302 +0x81c
+net.(*Resolver).internetAddrList(0x1486248, {0x1486248, 0xc0001266c0}, {0x140d864, 0x3}, {0xc000128486, 0xa})
+	/usr/local/opt/go/libexec/src/net/ipsock.go:288 +0x7c6
+net.(*Resolver).resolveAddrList(0x16a17e0, {0x1486248, 0xc0001266c0}, {0x140d9ea, 0x4}, {0x140d864, 0x3}, {0xc000128486, 0xa}, {0x0, ...})
+	/usr/local/opt/go/libexec/src/net/dial.go:221 +0x556
+net.(*Dialer).DialContext(0xc0001262a0, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc000128486, 0xa})
+	/usr/local/opt/go/libexec/src/net/dial.go:406 +0x6e5
+net/http.(*Transport).dial(0x166bd80, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc000128486, 0xa})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1166 +0x26a
+net/http.(*Transport).dialConn(0x166bd80, {0x1486210, 0xc000128018}, {{}, 0x0, {0x1410544, 0x4}, {0xc000128486, 0xa}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1604 +0xd58
+net/http.(*Transport).dialConnFor(0xe, 0xc00014a370)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1446 +0x13b
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 35 [runnable]:
+net/http.(*Transport).getConn(0x166bd80, 0xc00022e000, {{}, 0x0, {0x1413994, 0x5}, {0xc00022a018, 0x13}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1372 +0xa45
+net/http.(*Transport).roundTrip(0x166bd80, 0xc000212100)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:581 +0xcdf
+net/http.(*Transport).RoundTrip(0xc000212100, 0x147faa0)
+	/usr/local/opt/go/libexec/src/net/http/roundtrip.go:18 +0x37
+net/http.send(0xc000212100, {0x147faa0, 0x166bd80}, {0x0, 0x108fca0, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:252 +0x93f
+net/http.(*Client).send(0x1671400, 0xc000212100, {0x1290cce, 0x14, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/client.go:176 +0x158
+net/http.(*Client).do(0x1671400, 0xc000212100)
+	/usr/local/opt/go/libexec/src/net/http/client.go:725 +0x1087
+net/http.(*Client).Do(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:593
+net/http.(*Client).Get(0x0, {0x1413994, 0x17})
+	/usr/local/opt/go/libexec/src/net/http/client.go:480 +0xb1
+net/http.Get(...)
+	/usr/local/opt/go/libexec/src/net/http/client.go:449
+gopl.io/ch9/memotest.httpGetBody({0x1413994, 0x17})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:14 +0x85
+gopl.io/ch9/memo1.(*Memo).Get(0xc00011aeb0, {0x1413994, 0x17})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memo1/memo1.go:25 +0xdf
+gopl.io/ch9/memotest.Concurrent.func1({0x1413994, 0x17})
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:68 +0xf3
+created by gopl.io/ch9/memotest.Concurrent
+	/Users/liuwenjie/git/go_programming_language/gopl.io/ch9/memotest/memotest.go:65 +0x85
+
+goroutine 5 [select]:
+net.(*Resolver).lookupIPAddr(0x16710c0, {0x1486248, 0xc000012300}, {0x140d864, 0x0}, {0xc0000160a8, 0xf})
+	/usr/local/opt/go/libexec/src/net/lookup.go:302 +0x81c
+net.(*Resolver).internetAddrList(0x1486248, {0x1486248, 0xc000012300}, {0x140d864, 0x3}, {0xc0000160a8, 0x13})
+	/usr/local/opt/go/libexec/src/net/ipsock.go:288 +0x7c6
+net.(*Resolver).resolveAddrList(0x16a17e0, {0x1486248, 0xc000012300}, {0x140d9ea, 0x4}, {0x140d864, 0x3}, {0xc0000160a8, 0x13}, {0x0, ...})
+	/usr/local/opt/go/libexec/src/net/dial.go:221 +0x556
+net.(*Dialer).DialContext(0xc0001262a0, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0000160a8, 0x13})
+	/usr/local/opt/go/libexec/src/net/dial.go:406 +0x6e5
+net/http.(*Transport).dial(0x166bd80, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0000160a8, 0x13})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1166 +0x26a
+net/http.(*Transport).dialConn(0x166bd80, {0x1486210, 0xc000128018}, {{}, 0x0, {0x1413994, 0x5}, {0xc0000160a8, 0x13}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1604 +0xd58
+net/http.(*Transport).dialConnFor(0x17, 0xc000290000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1446 +0x13b
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 50 [select]:
+net.(*Resolver).lookupIPAddr(0x16710c0, {0x1486248, 0xc000410120}, {0x140d864, 0x0}, {0xc0000b2012, 0xa})
+	/usr/local/opt/go/libexec/src/net/lookup.go:302 +0x81c
+net.(*Resolver).internetAddrList(0x1486248, {0x1486248, 0xc000410120}, {0x140d864, 0x3}, {0xc0000b2012, 0xe})
+	/usr/local/opt/go/libexec/src/net/ipsock.go:288 +0x7c6
+net.(*Resolver).resolveAddrList(0x16a17e0, {0x1486248, 0xc000410120}, {0x140d9ea, 0x4}, {0x140d864, 0x3}, {0xc0000b2012, 0xe}, {0x0, ...})
+	/usr/local/opt/go/libexec/src/net/dial.go:221 +0x556
+net.(*Dialer).DialContext(0xc0001262a0, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0000b2012, 0xe})
+	/usr/local/opt/go/libexec/src/net/dial.go:406 +0x6e5
+net/http.(*Transport).dial(0x166bd80, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0000b2012, 0xe})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1166 +0x26a
+net/http.(*Transport).dialConn(0x166bd80, {0x1486210, 0xc000128018}, {{}, 0x0, {0x1411afe, 0x5}, {0xc0000b2012, 0xe}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1604 +0xd58
+net/http.(*Transport).dialConnFor(0x12, 0xc0000b8000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1446 +0x13b
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 27 [runnable]:
+context.(*cancelCtx).Done(0xc00016c8c0)
+	/usr/local/opt/go/libexec/src/context/context.go:358 +0x1f8
+net.cgoLookupIP({0x14861d8, 0xc00016c8c0}, {0x140d864, 0x7}, {0xc000128486, 0x0})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:234 +0x202
+net.(*Resolver).lookupIP(0x16710c0, {0x14861d8, 0xc00016c8c0}, {0x140d864, 0x3}, {0xc000128486, 0x7})
+	/usr/local/opt/go/libexec/src/net/lookup_unix.go:97 +0x113
+net.glob..func1({0x14861d8, 0xc00016c8c0}, 0xc00011af50, {0x140d864, 0x3}, {0xc000128486, 0x7})
+	/usr/local/opt/go/libexec/src/net/hook.go:23 +0x89
+net.(*Resolver).lookupIPAddr.func1()
+	/usr/local/opt/go/libexec/src/net/lookup.go:296 +0x133
+internal/singleflight.(*Group).doCall(0x16710d0, 0xc00010e280, {0xc000128495, 0xb}, 0xc00016c900)
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:95 +0x68
+created by internal/singleflight.(*Group).DoChan
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:88 +0x59b
+
+goroutine 51 [select]:
+net.(*Resolver).lookupIPAddr(0x16710c0, {0x1486248, 0xc0000ba300}, {0x140d864, 0x0}, {0xc0000b2033, 0x9})
+	/usr/local/opt/go/libexec/src/net/lookup.go:302 +0x81c
+net.(*Resolver).internetAddrList(0x1486248, {0x1486248, 0xc0000ba300}, {0x140d864, 0x3}, {0xc0000b2033, 0xd})
+	/usr/local/opt/go/libexec/src/net/ipsock.go:288 +0x7c6
+net.(*Resolver).resolveAddrList(0x16a17e0, {0x1486248, 0xc0000ba300}, {0x140d9ea, 0x4}, {0x140d864, 0x3}, {0xc0000b2033, 0xd}, {0x0, ...})
+	/usr/local/opt/go/libexec/src/net/dial.go:221 +0x556
+net.(*Dialer).DialContext(0xc0001262a0, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0000b2033, 0xd})
+	/usr/local/opt/go/libexec/src/net/dial.go:406 +0x6e5
+net/http.(*Transport).dial(0x166bd80, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0000b2033, 0xd})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1166 +0x26a
+net/http.(*Transport).dialConn(0x166bd80, {0x1486210, 0xc000128018}, {{}, 0x0, {0x14114b8, 0x5}, {0xc0000b2033, 0xd}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1604 +0xd58
+net/http.(*Transport).dialConnFor(0x0, 0xc0000b80b0)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1446 +0x13b
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 6 [select]:
+net.cgoLookupIP({0x14861d8, 0xc00007e080}, {0x140d864, 0xf}, {0xc0000160a8, 0x0})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:231 +0x289
+net.(*Resolver).lookupIP(0x16710c0, {0x14861d8, 0xc00007e080}, {0x140d864, 0x3}, {0xc0000160a8, 0xf})
+	/usr/local/opt/go/libexec/src/net/lookup_unix.go:97 +0x113
+net.glob..func1({0x14861d8, 0xc00007e080}, 0xc000068070, {0x140d864, 0x3}, {0xc0000160a8, 0xf})
+	/usr/local/opt/go/libexec/src/net/hook.go:23 +0x89
+net.(*Resolver).lookupIPAddr.func1()
+	/usr/local/opt/go/libexec/src/net/lookup.go:296 +0x133
+internal/singleflight.(*Group).doCall(0x16710d0, 0xc000294050, {0xc0000160c0, 0x13}, 0xc00007e0c0)
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:95 +0x68
+created by internal/singleflight.(*Group).DoChan
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:88 +0x59b
+
+goroutine 36 [runnable]:
+net/http.(*Transport).queueForDial·dwrap·112()
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415
+runtime.goexit()
+	/usr/local/opt/go/libexec/src/runtime/asm_amd64.s:1581 +0x1
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 66 [select]:
+net.(*Resolver).lookupIPAddr(0x16710c0, {0x1486248, 0xc00032a240}, {0x140d864, 0x0}, {0xc000320012, 0xa})
+	/usr/local/opt/go/libexec/src/net/lookup.go:302 +0x81c
+net.(*Resolver).internetAddrList(0x1486248, {0x1486248, 0xc00032a240}, {0x140d864, 0x3}, {0xc000320012, 0xe})
+	/usr/local/opt/go/libexec/src/net/ipsock.go:288 +0x7c6
+net.(*Resolver).resolveAddrList(0x16a17e0, {0x1486248, 0xc00032a240}, {0x140d9ea, 0x4}, {0x140d864, 0x3}, {0xc000320012, 0xe}, {0x0, ...})
+	/usr/local/opt/go/libexec/src/net/dial.go:221 +0x556
+net.(*Dialer).DialContext(0xc0001262a0, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc000320012, 0xe})
+	/usr/local/opt/go/libexec/src/net/dial.go:406 +0x6e5
+net/http.(*Transport).dial(0x166bd80, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc000320012, 0xe})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1166 +0x26a
+net/http.(*Transport).dialConn(0x166bd80, {0x1486210, 0xc000128018}, {{}, 0x0, {0x1411afe, 0x5}, {0xc000320012, 0xe}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1604 +0xd58
+net/http.(*Transport).dialConnFor(0x12, 0xc000328000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1446 +0x13b
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 28 [runnable]:
+net.cgoLookupIP·dwrap·22()
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:230
+runtime.goexit()
+	/usr/local/opt/go/libexec/src/runtime/asm_amd64.s:1581 +0x1
+created by net.cgoLookupIP
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:230 +0x1ba
+
+goroutine 52 [runnable]:
+context.(*cancelCtx).Done(0xc0000b4080)
+	/usr/local/opt/go/libexec/src/context/context.go:358 +0x1f8
+net.cgoLookupIP({0x14861d8, 0xc0000b4080}, {0x140d864, 0x9}, {0xc0000b2033, 0x0})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:234 +0x202
+net.(*Resolver).lookupIP(0x16710c0, {0x14861d8, 0xc0000b4080}, {0x140d864, 0x3}, {0xc0000b2033, 0x9})
+	/usr/local/opt/go/libexec/src/net/lookup_unix.go:97 +0x113
+net.glob..func1({0x14861d8, 0xc0000b4080}, 0xc0000a40a0, {0x140d864, 0x3}, {0xc0000b2033, 0x9})
+	/usr/local/opt/go/libexec/src/net/hook.go:23 +0x89
+net.(*Resolver).lookupIPAddr.func1()
+	/usr/local/opt/go/libexec/src/net/lookup.go:296 +0x133
+internal/singleflight.(*Group).doCall(0x16710d0, 0xc0000bc050, {0xc0000b2043, 0xd}, 0xc0000b40c0)
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:95 +0x68
+created by internal/singleflight.(*Group).DoChan
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:88 +0x59b
+
+goroutine 98 [select]:
+net.(*Resolver).lookupIPAddr(0x16710c0, {0x1486248, 0xc0003aa240}, {0x140d864, 0x0}, {0xc0003a0013, 0x9})
+	/usr/local/opt/go/libexec/src/net/lookup.go:302 +0x81c
+net.(*Resolver).internetAddrList(0x1486248, {0x1486248, 0xc0003aa240}, {0x140d864, 0x3}, {0xc0003a0013, 0xd})
+	/usr/local/opt/go/libexec/src/net/ipsock.go:288 +0x7c6
+net.(*Resolver).resolveAddrList(0x16a17e0, {0x1486248, 0xc0003aa240}, {0x140d9ea, 0x4}, {0x140d864, 0x3}, {0xc0003a0013, 0xd}, {0x0, ...})
+	/usr/local/opt/go/libexec/src/net/dial.go:221 +0x556
+net.(*Dialer).DialContext(0xc0001262a0, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0003a0013, 0xd})
+	/usr/local/opt/go/libexec/src/net/dial.go:406 +0x6e5
+net/http.(*Transport).dial(0x166bd80, {0x1486210, 0xc000128018}, {0x140d864, 0x3}, {0xc0003a0013, 0xd})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1166 +0x26a
+net/http.(*Transport).dialConn(0x166bd80, {0x1486210, 0xc000128018}, {{}, 0x0, {0x14114b8, 0x5}, {0xc0003a0013, 0xd}, 0x0})
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1604 +0xd58
+net/http.(*Transport).dialConnFor(0x11, 0xc0003a8000)
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1446 +0x13b
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 67 [select]:
+net.cgoLookupIP({0x14861d8, 0xc000324040}, {0x140d864, 0xa}, {0xc000320012, 0x0})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:231 +0x289
+net.(*Resolver).lookupIP(0x16710c0, {0x14861d8, 0xc000324040}, {0x140d864, 0x3}, {0xc000320012, 0xa})
+	/usr/local/opt/go/libexec/src/net/lookup_unix.go:97 +0x113
+net.glob..func1({0x14861d8, 0xc000324040}, 0xc000322070, {0x140d864, 0x3}, {0xc000320012, 0xa})
+	/usr/local/opt/go/libexec/src/net/hook.go:23 +0x89
+net.(*Resolver).lookupIPAddr.func1()
+	/usr/local/opt/go/libexec/src/net/lookup.go:296 +0x133
+internal/singleflight.(*Group).doCall(0x16710d0, 0xc000330050, {0xc000320022, 0xe}, 0xc000324080)
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:95 +0x68
+created by internal/singleflight.(*Group).DoChan
+	/usr/local/opt/go/libexec/src/internal/singleflight/singleflight.go:88 +0x59b
+
+goroutine 68 [syscall]:
+net._C2func_getaddrinfo(0xc000320035, 0x0, 0xc000318150, 0xc00031c020)
+	_cgo_gotypes.go:97 +0x8b
+net.cgoLookupIPCNAME.func1({0xc000320035, 0xb, 0xc000320012}, 0x0, 0x16710c0)
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:163 +0xb2
+net.cgoLookupIPCNAME({0x140d864, 0x3}, {0xc000320012, 0xc000128018})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:163 +0x26e
+net.cgoIPLookup(0x16710d0, {0x140d864, 0x3}, {0xc000320012, 0xa})
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:220 +0x67
+created by net.cgoLookupIP
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:230 +0x1ba
+
+goroutine 83 [runnable]:
+net/http.(*Transport).queueForDial·dwrap·112()
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415
+runtime.goexit()
+	/usr/local/opt/go/libexec/src/runtime/asm_amd64.s:1581 +0x1
+created by net/http.(*Transport).queueForDial
+	/usr/local/opt/go/libexec/src/net/http/transport.go:1415 +0x175
+
+goroutine 99 [runnable]:
+net.cgoLookupIP·dwrap·22()
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:230
+runtime.goexit()
+	/usr/local/opt/go/libexec/src/runtime/asm_amd64.s:1581 +0x1
+created by net.cgoLookupIP
+	/usr/local/opt/go/libexec/src/net/cgo_unix.go:230 +0x1ba
+
+rax    0x2000209
+rbx    0x80
+rcx    0x700008600e58
+rdx    0x0
+rdi    0x8
+rsi    0x1
+rbp    0x700008600ea0
+rsp    0x700008600e58
+r8     0x600002c00000
+r9     0x80
+r10    0x0
+r11    0x246
+r12    0x0
+r13    0x0
+r14    0x1
+r15    0x8
+rip    0x7ff81c0a5dfe
+rflags 0x246
+cs     0x7
+fs     0x0
+gs     0x0
+FAIL	gopl.io/ch9/memo1	0.167s
+FAIL
